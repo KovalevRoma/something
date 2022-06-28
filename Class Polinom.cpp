@@ -9,7 +9,7 @@ ld binpow (ld a, int n)
 	if (n % 2 == 1)
 		return (binpow (a, n-1) * a);
 	else
-    {
+    	{
 		int b = (binpow (a, n/2));
 		return (b * b);
 	}
@@ -26,8 +26,8 @@ public:
     ld Coef(int i);
     ld Value(ld x);
     ~Polynom();
-    Polynom(const Polynom &);       //копирование
-    int getn();                     //степень полинома
+    Polynom(const Polynom &);       //РєРѕРїРёСЂРѕРІР°РЅРёРµ
+    int getn();                     //СЃС‚РµРїРµРЅСЊ РїРѕР»РёРЅРѕРјР°
     Polynom operator+(const Polynom &);
     Polynom operator-(const Polynom &);
     Polynom operator*(const Polynom &);
@@ -200,22 +200,22 @@ int main()
     setlocale(LC_ALL, "Russian");
     int n, m, i;
     ld x;
-    cout << "Введите степени многочленов p(x) и q(x):" << '\n';
+    cout << "Р’РІРµРґРёС‚Рµ СЃС‚РµРїРµРЅРё РјРЅРѕРіРѕС‡Р»РµРЅРѕРІ p(x) Рё q(x):" << '\n';
     cin >> n >> m;
     Polynom A(n), B(m);
-    cout << "Введите коэфициенты полинома p(x):" << '\n';
+    cout << "Р’РІРµРґРёС‚Рµ РєРѕСЌС„РёС†РёРµРЅС‚С‹ РїРѕР»РёРЅРѕРјР° p(x):" << '\n';
     cin >> A;
-    cout << "Введите коэфициенты полинома q(x):" << '\n';
+    cout << "Р’РІРµРґРёС‚Рµ РєРѕСЌС„РёС†РёРµРЅС‚С‹ РїРѕР»РёРЅРѕРјР° q(x):" << '\n';
     cin >> B;
-    cout << setw(17) << "Многочлен p(x):" << setw(5) << A << '\n';
-    cout << setw(17) << "Многочлен q(x):" << setw(5) << B << '\n';
-    cout << setw(17) << "Сложение p(x) + q(x):" << setw(5) << (A + B) << '\n';
-    cout << setw(17) << "Вычитание p(x) - q(x):" << setw(5) << (A - B) << '\n';
-    cout << setw(17) << "умножение p(x) * q(x):" << setw(5) << (A * B)<< '\n';
-    cout << "Введите точку:" << '\n';
+    cout << setw(17) << "РњРЅРѕРіРѕС‡Р»РµРЅ p(x):" << setw(5) << A << '\n';
+    cout << setw(17) << "РњРЅРѕРіРѕС‡Р»РµРЅ q(x):" << setw(5) << B << '\n';
+    cout << setw(17) << "РЎР»РѕР¶РµРЅРёРµ p(x) + q(x):" << setw(5) << (A + B) << '\n';
+    cout << setw(17) << "Р’С‹С‡РёС‚Р°РЅРёРµ p(x) - q(x):" << setw(5) << (A - B) << '\n';
+    cout << setw(17) << "СѓРјРЅРѕР¶РµРЅРёРµ p(x) * q(x):" << setw(5) << (A * B)<< '\n';
+    cout << "Р’РІРµРґРёС‚Рµ С‚РѕС‡РєСѓ:" << '\n';
     cin >> x;
-    cout << setw(17) << "Значение p(x) в точке:" << setw(5) << A.Value(x) << '\n';
-    cout << setw(17) << "Значение q(x) в точке:" << setw(5) << B.Value(x) << '\n';
+    cout << setw(17) << "Р—РЅР°С‡РµРЅРёРµ p(x) РІ С‚РѕС‡РєРµ:" << setw(5) << A.Value(x) << '\n';
+    cout << setw(17) << "Р—РЅР°С‡РµРЅРёРµ q(x) РІ С‚РѕС‡РєРµ:" << setw(5) << B.Value(x) << '\n';
     //cin >> i;
     //cout << A.Coef(i) << endl;
 
